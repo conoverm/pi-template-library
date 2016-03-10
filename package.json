@@ -1,0 +1,21 @@
+{
+  "name": "pi-template-library",
+  "version": "1.0.0",
+  "description": "Leveraging the T1 platform, the PINT Template Library allows users to create and store strategy templates and create multiple strategies based on those templates. Created for the MediaMath 2016 Winter Hackathon. (Winter, even though it was 70 degrees and sunny in March! Thanks a lot Al Gore!)",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm test"
+  },
+  "keywords": [
+    "t1",
+    "mediamath",
+    "template",
+    "strategy",
+    "bulk"
+  ],
+  "author": "Matthew Conover, Andrew Pierce, Leif Orion Kramer",
+  "license": "ISC",
+  "dependencies": {
+    "angular": "^1.4.9"
+  }
+}
