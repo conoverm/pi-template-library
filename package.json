@@ -13,7 +13,7 @@
     "strategy",
     "bulk"
   ],
-  "author": "Matthew Conover, Andrew Pierce, Leif Orion Kramer",
+  "author": "Andrew Pierce, Leif Orion Kramer, Nathan Grouse, Matthew Conover",
   "license": "ISC",
   "dependencies": {
     "angular": "^1.4.9",
