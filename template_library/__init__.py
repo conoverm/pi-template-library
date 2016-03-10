@@ -99,7 +99,7 @@ def update_targeting(originals, changes, operation=None):
 
 @app.route('/')
 def hello():
-    return 'Hello World!'
+    return '<html><body><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>Hello World!</body></html>'
 
 @app.route('/strategies/create', methods=['POST'])
 def edit_strategies():
