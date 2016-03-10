@@ -52,7 +52,7 @@
       </form>
     </div>
   </div>
-
+<input id="all-campaign-search" type="text" ng-model="campaigns" placeholder="Search by Campaign name or Id" typeahead="camp as camp.displayName for camp in getAllCampaigns($viewValue)" typeahead-on-select="onCampSelect()" class="form-control" required>
   <!-- 
   https://developer.mediamath.com/docs/read/execution_and_management_api/Strategies
   https://mediamath.app.box.com/notes/56404229598?s=gzsuyt2rw1gy096adh27ohqt1mi29v0p
