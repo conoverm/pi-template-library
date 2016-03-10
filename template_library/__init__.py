@@ -11,7 +11,7 @@ from terminalone import T1
 from terminalone.errors import (APIError, AuthRequiredError, ClientError, NotFoundError,
 								ParserException, ValidationError, T1Error)
 from terminalone.models import TargetValue
-from .config import SINGULAR, SUPPLIES, STRATEGY_PROPERTIES, TARGET_DIMENSIONS
+from .config import BASE_CONFIG, SINGULAR, SUPPLIES, STRATEGY_PROPERTIES, TARGET_DIMENSIONS
 
 app = Flask(__name__)
 app.config.from_object('template_library.config')
@@ -40,7 +40,10 @@ def empty_generator():
 
 def new_t1():
 	session = request.cookies['adama_session']
-	t1 = retry_return(5, T1, auth_method='cookie', session_id=session)
+	t1 = retry_return(5, T1,
+					auth_method='cookie',
+					session_id=session,
+					api_base=BASE_CONFIG[request.headers['Host']][0])
 	return t1
 
 def return_status(content, code=200, data=None):
@@ -120,14 +123,14 @@ def edit_strategies():
 		data = [data]
 	
 	# ONLY FOR PING PONG
-	print data
-	return return_status('PONG!', 200, data=data)
+	# print data
+	# return return_status('PONG!', 200, data=data)
 	#
 
 	for template_strategy in data:
-		properties = data.get('properties', {})
-		pixel_targeting = data.get('pixel_targeting')
-		child_entities = data.get('child_entities', {})
+		properties = template_strategy.get('properties', {})
+		pixel_targeting = template_strategy.get('pixel_targeting')
+		child_entities = template_strategy.get('child_entities', {})
 
 		try:
 			strategy = t1.new('strategy')
@@ -222,8 +225,8 @@ def edit_strategies():
 							traceback.format_exc()))
 			logging.info('Strategy properties before save: {}'.format(
 														props_before_save))
-			return return_status('Error\nUnexpected error occured', code=500)
-
+			return return_status('Unexpected error occured', code=500)
+		_id = strategy.id
 
 		# All Target Dimensions are handled the same way
 		# Iteration syntax works only in Python 3 and 2.7+
