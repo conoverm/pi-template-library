@@ -29,6 +29,13 @@
       <div class="col-sm-4">
         Choose a strategy template to clone more strategies. Once the cloned strategies have been edited and validated you can submit them.
       </div>
+      <!-- <select name="singleSelect" ng-model="one" ng-click="showSelected()">
+        <option ng-repeat="template in templates" value="{{template}}">{{template.name}}</option>
+      </select> -->
+    </div>
+    <br>
+    <div class="col-sm-4">
+    <p class="" ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">{{template.name}}</p>
     </div>
   </div>
   <div class="container">
@@ -50,9 +57,27 @@
         </div>
 
       </form>
+      </div>
+      <div class="col-sm-4">
+        <h2>{{selectedTemplate.name}} Template Values</h2>
+        <table class="table col-sm-4">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>       
+          </thead>
+          <tbody>       
+            <tr ng-repeat="(key, value) in selectedTemplate.template">
+              <td>{{key}}</td>
+              <td>{{value}}</td>
+            </tr>       
+          </tbody>
+        </table>         
+      </div>
     </div>
   </div>
-<input id="all-campaign-search" type="text" ng-model="campaigns" placeholder="Search by Campaign name or Id" typeahead="camp as camp.displayName for camp in getAllCampaigns($viewValue)" typeahead-on-select="onCampSelect()" class="form-control" required>
+
   <!-- 
   https://developer.mediamath.com/docs/read/execution_and_management_api/Strategies
   https://mediamath.app.box.com/notes/56404229598?s=gzsuyt2rw1gy096adh27ohqt1mi29v0p
@@ -70,11 +95,85 @@
   <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>  
   <script type="text/javascript">
 
-    var app = angular.module('pintTemplateLibrary', ['firebase', 'ui.bootstrap'])
-    .controller('strategyTemplate', function($scope, $http, $firebaseObject) {
+    var app = angular.module('pintTemplateLibrary', [
+    'firebase',
+    'ngAnimate',
+    'ngTouch',
+    'ui.bootstrap'
+    ])
+    .controller('strategyTemplate', function($scope, $http, $firebaseObject, $firebaseArray) {
 
-      var ref = new Firebase("https://strategytemplates.firebaseio.com/1");
+      var ref = new Firebase("https://strategytemplates.firebaseio.com");
+      // $scope.selectedTemplate = {}
       // download the data into a local object
+
+      $scope.templates = $firebaseArray(ref)
+
+      $scope.templates.$loaded()
+        .then(function(x) {
+          console.log($scope.templates)
+        })
+        .catch(function(error) {
+          console.log("Error:", error);
+        });      
+
+        $scope.showSelected = function(){
+
+          console.log($scope)
+          console.log($scope.templates)
+          console.log($scope.one)
+        }
+
+        $scope.selectTemplate = function(template){
+          $scope.selectedTemplate = template
+          template.selected = true
+        }
+      
+
+      // $scope.data.$loaded().then(function(data){
+      //   $scope.data.editable = 'concepts, region, budget'
+      //   $scope.data.template = {
+
+      //     'bid_aggressiveness': "50.00",
+      //     'bid_price_is_media_only': true,
+      //     'budget': 1000000,
+      //     'campaign_id': 12345,
+      //     'effective_goal_value': 11.15,
+      //     'frequency_amount': 1,
+      //     'frequency_interval': "day",
+      //     'frequency_type': "asap",
+      //     'goal_type': "spend",
+      //     'goal_value': 12.25,
+      //     'max_bid': 3.00,
+      //     'media_type': "DISPLAY",
+      //     'pacing_amount': 200,
+      //     'pacing_interval': "day",
+      //     'pacing_type': "even",   
+      //     'run_on_all_exchanges': true,
+      //     'run_on_all_pmp': false,
+      //     'run_on_display': true,
+      //     'run_on_mobile': true,
+      //     'run_on_streaming': false,
+      //     'site_restriction_transparent_urls': false,
+      //     'site_selectiveness': "REDUCED",
+      //     'supply_type': "RTB",
+      //     'type': "AUD",
+      //     'use_campaign_end': true,
+      //     'use_campaign_start': true,
+      //     'use_mm_freq': false,
+      //     'use_optimization': true            
+      //   }
+
+      //   $scope.data.name = 'Dell Enterprise REM'
+
+      //   $scope.data.$save().then(function(ref) {
+      //     ref.key() === $scope.data.$id; // true
+      //   }, function(error) {
+      //     console.log("Error:", error);
+      //   });
+
+      // })
+
       var t1endpoint = 'https://t1qa1.mediamath.com/api/v2.0/';
 
       /*
