@@ -14,7 +14,7 @@
 <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 <![endif]-->
 </head>
-<body ng-app="pintTemplateLibrary" ng-controller="strategyTemplate">
+<body ng-app="pintTemplateLibrary">
   <nav class="navbar navbar-static-top">
     <div class="container">
       <div class="navbar-header">
@@ -29,62 +29,26 @@
       <div class="col-sm-4">
         Choose a strategy template to clone more strategies. Once the cloned strategies have been edited and validate you can submit one or all.
       </div>
-      <!-- <select name="singleSelect" ng-model="one" ng-click="showSelected()">
-        <option ng-repeat="template in templates" value="{{template}}">{{template.name}}</option>
-      </select> -->
-    </div>
-    <br>
-    <div class="col-sm-4">
-    <p class="" ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">{{template.name}}</p>
     </div>
   </div>
   <div class="container">
-    <div class="row"  >
-      <div class="col-sm-8">
-        <form ng-show="selectedTemplate" action="POST" name="clone-validator" class="form-inline" novalidate  autocomplete="off">
+    <div class="row">
+      <div ng-controller="strategyTemplate" class="col-sm-12">
+        <form action="POST" name="clone-validator" class="form-inline" novalidate>
+
           <div class="form-group">
             <label class="sr-only" for="strategy-name">Strategy Name</label>
             <input type="text" ng-model="clone.strategyName" name="strategy-name" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
           </div>
-    
-
 
 
           <div class="form-group">
             <label class="sr-only" for="geo-target">Geography Targeting</label>
-            <input type="text"
-            ng-model="clone.geoTarget"
-            name="geo-target"
-            class="form-control"
-            id="clone.geo-target"
-            placeholder="Geography Targeting"
-            required="required"
-            typeahead="geo as geo.displayName for geo in getAllGeoTargets($viewValue)"
-            typeahead-on-select="onGeoTargetSelect()">
+            <input type="text" ng-model="clone.geoTarget" name="geo-target" class="form-control" id="clone.geo-target" placeholder="Geography Targeting" required="required" typeahead="geo as geo.displayName for geo in getAllGeoTargets($viewValue)" typeahead-on-select="onGeoTargetSelect()">
           </div>
-
-
 
         </form>
       </div>
-      <div class="col-sm-4">
-        <h2>{{selectedTemplate.name}} Template Values</h2>
-        <table class="table col-sm-4">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Value</th>
-            </tr>       
-          </thead>
-          <tbody>       
-            <tr ng-repeat="(key, value) in selectedTemplate.template">
-              <td>{{key}}</td>
-              <td>{{value}}</td>
-            </tr>       
-          </tbody>
-        </table>         
-      </div>
-
     </div>
   </div>
 
@@ -93,216 +57,38 @@
   https://mediamath.app.box.com/notes/56404229598?s=gzsuyt2rw1gy096adh27ohqt1mi29v0p
   https://pi-qa.mediamath.com/tools/bulk_strategy_editor/#/ for some 
   -->
-  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+
   <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
   <script src="node_modules/angular-touch/angular-touch.min.js"></script>
   <script src="node_modules/angular-animate/angular-animate.min.js"></script>
-  <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   <!-- <script src="node_modules/firebase/lib/firebase-web.js"></script> -->
   <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
-  <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
-  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
-  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
-
   <script type="text/javascript">
-
-    var app = angular.module('pintTemplateLibrary', [
-    'firebase',
-    'ngAnimate',
-    'ngTouch',
-    'ui.bootstrap'
-    ])
-    .controller('strategyTemplate', function($scope, $http, $firebaseObject, $firebaseArray) {
-
-      var ref = new Firebase("https://strategytemplates.firebaseio.com");
-      // $scope.selectedTemplate = {}
-      // download the data into a local object
-
-      $scope.templates = $firebaseArray(ref)
-
-      $scope.templates.$loaded()
-        .then(function(x) {
-          console.log($scope.templates)
-        })
-        .catch(function(error) {
-          console.log("Error:", error);
-        });      
-
-        $scope.showSelected = function(){
-
-          console.log($scope)
-          console.log($scope.templates)
-          console.log($scope.one)
-        }
-
-        $scope.selectTemplate = function(template){
-          $scope.selectedTemplate = template
-          template.selected = true
-        }
-      
-
-
-      // $scope.data.$loaded().then(function(data){
-      //   $scope.data.editable = 'concepts, region, budget'
-      //   $scope.data.template = {
-
-      //     'bid_aggressiveness': "50.00",
-      //     'bid_price_is_media_only': true,
-      //     'budget': 1000000,
-      //     'campaign_id': 12345,
-      //     'effective_goal_value': 11.15,
-      //     'frequency_amount': 1,
-      //     'frequency_interval': "day",
-      //     'frequency_type': "asap",
-      //     'goal_type': "spend",
-      //     'goal_value': 12.25,
-      //     'max_bid': 3.00,
-      //     'media_type': "DISPLAY",
-      //     'pacing_amount': 200,
-      //     'pacing_interval': "day",
-      //     'pacing_type': "even",   
-      //     'run_on_all_exchanges': true,
-      //     'run_on_all_pmp': false,
-      //     'run_on_display': true,
-      //     'run_on_mobile': true,
-      //     'run_on_streaming': false,
-      //     'site_restriction_transparent_urls': false,
-      //     'site_selectiveness': "REDUCED",
-      //     'supply_type': "RTB",
-      //     'type': "AUD",
-      //     'use_campaign_end': true,
-      //     'use_campaign_start': true,
-      //     'use_mm_freq': false,
-      //     'use_optimization': true            
-      //   }
-
-      //   $scope.data.name = 'Dell Enterprise REM'
-
-      //   $scope.data.$save().then(function(ref) {
-      //     ref.key() === $scope.data.$id; // true
-      //   }, function(error) {
-      //     console.log("Error:", error);
-      //   });
-
-      // })
-
-      var t1endpoint = 'https://t1qa1.mediamath.com/api/v2.0/';
+    var app = angular.module('pintTemplateLibrary', [])
+    .controller('strategyTemplate', function($scope, $http) {
 
       var session = $http.get('https://t1qa1.mediamath.com/api/v2.0/session', { withCredentials: true});
+      console.info(session);
 
-      $scope.clone = {};
+      $scope.master = {};
 
-    $scope.getAllCampaigns = function(queryTerm) {
-        clearFields();
-        var qPassed;
-        //Search based off of Ids
-        if (queryTerm[0] === '#') {
-            var idPassed = queryTerm.slice(1, queryTerm.length);
-            var finalId = idPassed !== '' ? idPassed : 1234; //1234 is a fake id to avoid 404.
-            qPassed = 'id==' + finalId;
+      $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+      };
+
+      $scope.reset = function(form) {
+        if (form) {
+          form.$setPristine();
+          form.$setUntouched();
         }
-        //Search based off of Name
-            else {
-            qPassed = 'name=:' + queryTerm + '*';
-        }
+        $scope.user = angular.copy($scope.master);
+      };
 
-        return $http({
-            method: 'get',
-            url: t1endpoint + 'campaigns',
-            params: {
-                order_by: 'descending',
-                page_limit: '15',
-                q: qPassed
-            }
-        }).then(function(response) {
-            if (response.status !== 200){
-                $scope.errorMessage = 'No campaigns found. Please try again later.';
-                $scope.showErrorMessage = true;
-                $timeout(function(){
-                    $scope.showErrorMessage = null;
-                }, 10000);
-            } else {
-                var res = response.data.entities.entity;
-                if(res.length == 0){
-                    //skip displaying the error message for IDs, since they are not auto suggested.
-                    if(queryTerm[0] != '#'){
-                        $scope.errorMessage = 'No campaigns found. Please try again later.';
-                        $scope.showErrorMessage = true;
-                    }
-                }
-                else{
-                    var campaigns = [];
-
-                    angular.forEach(res, function(item) {
-                        var obj = {
-                            'id': item.id,
-                            'name': item.name,
-                            'displayName': item.name + ' - ' + item.id
-                            };
-                        campaigns.push(obj);
-                    });
-                    return campaigns;
-                }
-            }
-        });
-    };
-
-      //Completes typeahead for targets
-      $scope.getAllGeoTargets = function(queryTerm) {
-        var qPassed;
-        console.info(queryTerm)
-              //Search based off of Ids
-              if (queryTerm[0] === '#') {
-                var idPassed = queryTerm.slice(1, queryTerm.length);
-                  var finalId = idPassed !== '' ? idPassed : 1234; //1234 is a fake id to avoid 404.
-                  qPassed = 'id==' + finalId;
-                }
-              //Search based off of Name
-              else {
-                qPassed = 'name=:' + queryTerm + '*';
-              }
-
-              return $http({
-                method: 'get',
-                url: t1endpoint + 'target_values?dimension=REGN&sort_by=name',
-                params: {
-                  order_by: 'descending',
-                  page_limit: '20',
-                  q: qPassed
-                }
-              }).then(function(response) {
-                if (response.status !== 200){
-                  $scope.errorMessage = 'No targets found. Please try again later.';
-                  $scope.showErrorMessage = true;
-                  $timeout(function(){
-                    $scope.showErrorMessage = null;
-                  }, 10000);
-                } else {
-                  var res = response.data.entities.entity;
-                  if(res.length === 0){
-                          //skip displaying the error message for IDs, since they are not auto suggested.
-                          if(queryTerm[0] != '#'){
-                            $scope.errorMessage = 'No targets found. Please try again later.';
-                            $scope.showErrorMessage = true;
-                          }
-                        }
-                        else{
-                          var targets = [];
-
-                          angular.forEach(res, function(item) {
-                            var obj = {
-                              'id': item.id,
-                              'name': item.name,
-                              'displayName': item.name + ' - ' + item.id
-                            };
-                            targets.push(obj);
-                          });
-                          return targets;
-                        }
-                      }
-                    });
-            };
-
+      $scope.reset();
     });
   </script>
 </body>
