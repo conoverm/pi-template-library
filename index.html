@@ -41,8 +41,7 @@
   <div class="container">
     <div class="row"  >
       <div class="col-sm-8">
-        <form action="POST" name="clone-validator" class="form-inline" novalidate  autocomplete="off">
-
+        <form ng-show="selectedTemplate" action="POST" name="clone-validator" class="form-inline" novalidate  autocomplete="off">
           <div class="form-group">
             <label class="sr-only" for="strategy-name">Strategy Name</label>
             <input type="text" ng-model="clone.strategyName" name="strategy-name" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
@@ -141,6 +140,7 @@
           template.selected = true
         }
       
+
 
       // $scope.data.$loaded().then(function(data){
       //   $scope.data.editable = 'concepts, region, budget'
