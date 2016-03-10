@@ -2,3 +2,5 @@
 venv
 *.py[cod]
 *.creds
+*.creds
+.DS_Store
