@@ -1,0 +1,2061 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"bulkAp",
+				"bulkApiResponseSuccess"
+			],
+			[
+				"direct",
+				"directiveCtrl"
+			],
+			[
+				"direc",
+				"directiveCtrl"
+			],
+			[
+				"_",
+				"_$rootScope_"
+			],
+			[
+				"LO",
+				"LOG_ERROR"
+			],
+			[
+				"LOG",
+				"LOG_INFO"
+			],
+			[
+				"LOG_",
+				"LOG_WARN"
+			],
+			[
+				"before",
+				"beforeAll"
+			],
+			[
+				"togg",
+				"toggleTooltip"
+			],
+			[
+				"min",
+				"minCharacterSearch"
+			],
+			[
+				"tool",
+				"tooltipValidator"
+			],
+			[
+				"searchT",
+				"searchTooltipID"
+			],
+			[
+				"clear",
+				"clearTimeout〔function〕"
+			],
+			[
+				"search",
+				"searchTooltipID"
+			],
+			[
+				"previou",
+				"previousValue〔variable〕"
+			],
+			[
+				"prev",
+				"previousValue〔variable〕"
+			],
+			[
+				"strateg",
+				"strategyCount"
+			],
+			[
+				"collection",
+				"collectionCount"
+			],
+			[
+				"coll",
+				"collectionCount"
+			],
+			[
+				"high",
+				"highlightSearchResult"
+			],
+			[
+				"eac",
+				"each	.each()"
+			],
+			[
+				"searchIn",
+				"searchInputValue"
+			],
+			[
+				"fun",
+				"function〔keyword〕"
+			],
+			[
+				"publish",
+				"publishSearchInput"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"selec",
+				"selectAllState"
+			],
+			[
+				"sele",
+				"selectAllState"
+			],
+			[
+				"selectAll",
+				"selectAllState"
+			],
+			[
+				"partial",
+				"partialSelectAll"
+			],
+			[
+				"trans",
+				"transferStrategy"
+			],
+			[
+				"checkbox",
+				"checkboxChanged"
+			],
+			[
+				"switch",
+				"switchAllCheckboxes"
+			],
+			[
+				"current",
+				"currentTarget"
+			],
+			[
+				"e",
+				"error	.error()"
+			],
+			[
+				"all",
+				"allStrategies"
+			],
+			[
+				"strat",
+				"strategyCount"
+			],
+			[
+				"no",
+				"noop	$.noop()"
+			],
+			[
+				"checkb",
+				"checkboxChanged"
+			],
+			[
+				"checkB",
+				"checkboxesSelector"
+			],
+			[
+				"shift",
+				"shiftSelectAgain"
+			],
+			[
+				"selecte",
+				"selectedStrategiesRatio"
+			],
+			[
+				"checkBox",
+				"checkboxClick"
+			],
+			[
+				"return",
+				"returningUser"
+			],
+			[
+				"serialz",
+				"serialized"
+			],
+			[
+				"ser",
+				"serialized〔variable〕"
+			],
+			[
+				"sera",
+				"serialized"
+			],
+			[
+				"strategies",
+				"strategiesCollection"
+			],
+			[
+				"strate",
+				"strategy"
+			],
+			[
+				"scroll",
+				"scrollConfigs"
+			],
+			[
+				"init",
+				"initialize"
+			],
+			[
+				"campaign",
+				"campaignId"
+			],
+			[
+				"strt",
+				"strategiesCollection"
+			],
+			[
+				"each",
+				"each	$.each()"
+			],
+			[
+				"previous",
+				"previouslySelectedStrategies"
+			],
+			[
+				"selected",
+				"selectedStrategies〔variable〕"
+			],
+			[
+				"selectedStra",
+				"selectedStrategies"
+			],
+			[
+				"session",
+				"sessionStore"
+			],
+			[
+				"camp",
+				"campaignId"
+			],
+			[
+				"selectedStrat",
+				"selectedStrategyRatio"
+			],
+			[
+				"some",
+				"someStrategies"
+			],
+			[
+				"Bulk",
+				"BulkEditCollection"
+			],
+			[
+				"ini",
+				"initialize"
+			],
+			[
+				"campgi",
+				"campaignName"
+			],
+			[
+				"campaig",
+				"campaignName"
+			],
+			[
+				"bulk",
+				"bulkEditFooter〔variable〕"
+			],
+			[
+				"save",
+				"saveStrategyIds"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"fetch",
+				"fetchStrategies"
+			],
+			[
+				"str",
+				"strategiesCollection"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"stra",
+				"strategies"
+			],
+			[
+				"header",
+				"headerCrumbObj〔variable〕"
+			],
+			[
+				"head",
+				"headerCrumbObj〔variable〕"
+			],
+			[
+				"campai",
+				"campaign〔variable〕"
+			],
+			[
+				"C",
+				"CampaignName"
+			],
+			[
+				"adv",
+				"advertiserName"
+			],
+			[
+				"rend",
+				"renderPartialHeaderCrumb"
+			],
+			[
+				"pos",
+				"position"
+			],
+			[
+				"cur",
+				"cursor"
+			],
+			[
+				"res",
+				"response"
+			],
+			[
+				"fetc",
+				"fetchCampaignStrategies"
+			],
+			[
+				"ad",
+				"advertiserName"
+			],
+			[
+				"campa",
+				"campaignId"
+			],
+			[
+				"dep",
+				"dependency"
+			],
+			[
+				"mo",
+				"module_to_test"
+			],
+			[
+				"mod",
+				"mod_to_test"
+			],
+			[
+				"m",
+				"module_to_test"
+			],
+			[
+				"to",
+				"tbo	toBeObject"
+			],
+			[
+				"under",
+				"underscore"
+			],
+			[
+				"load",
+				"loadedModule〔argument〕"
+			],
+			[
+				"tb",
+				"tbt	toBeTruthy"
+			],
+			[
+				"backg",
+				"background-color"
+			],
+			[
+				"add",
+				"addClass"
+			],
+			[
+				"cla",
+				"class	Attr"
+			],
+			[
+				"shurg",
+				"shruggie	shruggie"
+			],
+			[
+				"ribbon",
+				"ribbonCommandStrip"
+			],
+			[
+				"favorit",
+				"favorites"
+			],
+			[
+				"favo",
+				"favoriteStarOff"
+			],
+			[
+				"toggle",
+				"toggleStar"
+			],
+			[
+				"toggl",
+				"toggleStar"
+			],
+			[
+				"ribb",
+				"ribbonFavStar"
+			],
+			[
+				"entit",
+				"entities"
+			],
+			[
+				"xml",
+				"xmlToJson"
+			],
+			[
+				"operat",
+				"operator_comparision"
+			],
+			[
+				"error",
+				"errorType"
+			],
+			[
+				"new",
+				"newQuery"
+			],
+			[
+				"chosen",
+				"chosenCtrl"
+			],
+			[
+				"nganno",
+				"ng-annotate"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1210,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 375.0,
+		"last_filter": "inden",
+		"selected_items":
+		[
+			[
+				"inden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"lint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"dis",
+				"Package Control: Disable Package"
+			],
+			[
+				"list",
+				"Package Control: List Packages"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"mark",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"jasmine",
+				"Set Syntax: Jasmine"
+			],
+			[
+				"lua",
+				"Set Syntax: Lua"
+			],
+			[
+				"json",
+				"Set Syntax: JSON (Javascript Next)"
+			],
+			[
+				"cache",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"LINT",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"CLEAR",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"clear",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"lint cac",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"lintt",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"lint t",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"sublime",
+				"SublimeLinter: Clear Caches"
+			],
+			[
+				"sort",
+				"Sort Lines"
+			],
+			[
+				"sublimelint",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"llint",
+				"SublimeLinter: Lint This View"
+			],
+			[
+				"wrap",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"rein",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"reind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"wra",
+				"Emmet: Wrap With Abbreviation"
+			],
+			[
+				"disabl",
+				"Package Control: Disable Package"
+			],
+			[
+				"ind",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"re",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"preview",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"markdo",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"disa",
+				"Package Control: Disable Package"
+			],
+			[
+				"jscs",
+				"JSCS Formatter: Format this file"
+			],
+			[
+				"enable",
+				"Package Control: Enable Package"
+			],
+			[
+				"disable",
+				"Package Control: Disable Package"
+			],
+			[
+				"sublimelinter",
+				"Preferences: SublimeLinter Settings – Default"
+			],
+			[
+				"indent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reformat",
+				"JSCS Formatter: Format this file"
+			],
+			[
+				"sublimelin",
+				"Preferences: SublimeLinter Settings – User"
+			],
+			[
+				"javasc",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"markdown",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"cheat",
+				"Markdown Preview: Open Markdown Cheat sheet"
+			],
+			[
+				"prev",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"doc",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"package",
+				"Package Control: List Packages"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"reparse",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"docblockr",
+				"DocBlockr: Reparse comment block"
+			],
+			[
+				"settings",
+				"Preferences: Settings - User"
+			],
+			[
+				"codeintel",
+				"SublimeCodeIntel: Enable Live Autocompletion for Current Language"
+			],
+			[
+				"sublimecodeintel",
+				"SublimeCodeIntel: Enable Live Autocompletion for Current Language"
+			],
+			[
+				"install ",
+				"Package Control: Install Package"
+			],
+			[
+				"git ",
+				"git: diff"
+			],
+			[
+				"reint",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"linger",
+				"SublimeLinter: Choose Gutter Theme"
+			],
+			[
+				"diff",
+				"git: diff current file inline"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reindn",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reindet",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"js",
+				"Set Syntax: JSON"
+			],
+			[
+				"lin",
+				"SublimeLinter: Show Errors on Save"
+			],
+			[
+				"linter",
+				"SublimeLinter: Enable Linter"
+			],
+			[
+				"reinden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"scss",
+				"Set Syntax: SCSS"
+			],
+			[
+				"dock",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"jasv",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"preive",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"prett",
+				"HTMLPrettify"
+			],
+			[
+				"pack",
+				"Package Control: Enable Package"
+			],
+			[
+				"keyconf",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"find",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"remove",
+				"Package Control: Remove Package"
+			],
+			[
+				"git",
+				"git: diff"
+			],
+			[
+				"conflicts",
+				"FindKeyConflicts: All Conflicts"
+			],
+			[
+				"emmet",
+				"Set Syntax: Emmet"
+			],
+			[
+				"git commit",
+				"git: commit"
+			],
+			[
+				"gitdiff",
+				"git: diff"
+			],
+			[
+				"prettify",
+				"HTMLPrettify"
+			],
+			[
+				"pretty",
+				"HTMLPrettify"
+			],
+			[
+				"origame",
+				"Origami: Destroy Pane Below"
+			],
+			[
+				"jasmin",
+				"Jasmine: Create spec file"
+			],
+			[
+				"git savvy",
+				"GitSavvy: stop logging"
+			],
+			[
+				"git savv",
+				"GitSavvy: help"
+			],
+			[
+				"instal",
+				"Package Control: Install Package"
+			],
+			[
+				"close",
+				"Project: Close"
+			],
+			[
+				"docblock",
+				"DocBlockr: Decorate line comment"
+			],
+			[
+				"javascript",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"angular",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"lint ",
+				"SublimeLinter: Show All Errors"
+			],
+			[
+				"markd",
+				"Markdown Preview: Preview in Browser"
+			],
+			[
+				"javascip",
+				"Set Syntax: JavaScript Next"
+			],
+			[
+				"less",
+				"Set Syntax: LESS"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
+			[
+				"beaut",
+				"HTMLBeautify"
+			],
+			[
+				"angularjs",
+				"Set Syntax: HTML (Angular.js)"
+			],
+			[
+				"bash",
+				"Set Syntax: Shell Script (Bash)"
+			],
+			[
+				"isntall",
+				"Package Control: Install Package"
+			],
+			[
+				"user ",
+				"Preferences: Settings - User"
+			],
+			[
+				"isntall ",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 579.0
+	},
+	"console":
+	{
+		"height": 308.0,
+		"history":
+		[
+			"asdf",
+			"sublime.log_commands(False)",
+			"sublime.log_commands()",
+			"sublime.log_commands(false)",
+			"sublime.log_commands(True)",
+			"show",
+			"sublime",
+			"changelog",
+			"import urllib.request,os,hashlib; h = '7183a2d3e96f11eeadd761d777e62404' + 'e330c659d4bb41d3bdf022e94cab3cd0'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/etc/hosts",
+		"/private/etc/hosts",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/.editorconfig",
+		"/Users/mconover/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/app.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/services/userService.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bulk_strategy_editor/__init__.py",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bulk_strategy_editor/config.py",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/controllers/login.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/views/login.html",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/views/main.html",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/controllers/main.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/services/t1apibase.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/services/bulkapibase.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/services/apibase.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/run.py",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/directives/uploadCSV.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/services/authinterceptor.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/controllers/dmas.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/services/apibase.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/services/bulkapibase.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/services/t1apibase.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/services/UploadService.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/README.md",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/.htaccess",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/controllers/login.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/controllers/utils.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/services/authinterceptor.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/controllers/main.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/services/datafactory.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/controllers/piUtil.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/services/datafactory.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bower.json",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/Gruntfile.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/karma.conf.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/directives/uploadCSV.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/.jshintrc",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/controllers/about.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bower_components/angular-mocks/angular-mocks.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/spec/filters/date.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/.jshintrc",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/.jshintrc",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/index.html",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/karma/karma.conf.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/package.json",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/styles/login.css",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bower_components/ng-file-upload/ng-file-upload.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/styles/main.css",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bower_components/angular/angular.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/services/sessionService.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bower_components/bootstrap/dist/css/bootstrap.css",
+		"/Users/mconover/Library/Application Support/Sublime Text 3/Packages/User/SublimeLinter.sublime-settings",
+		"/Users/mconover/mediamath/pint/pi-clearcode-2/cc-unit-test-fail.txt",
+		"/Users/mconover/mediamath/pint/pi-clearcode-2/README.md",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/.gitignore",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/dist/index.html",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/dist/scripts/vendor.77a9fd6d.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bulk-strategy.sublime-project",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/.jscsrc",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/directives/upload.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test/abcd.csv",
+		"/Users/mconover/Library/Application Support/Sublime Text 3/Packages/SublimeLinter/SublimeLinter.sublime-settings",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/bower_components/angular-ui-select2/README.md",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/node_modules/.bin/jshint",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/node_modules/bower/lib/node_modules/sntp/test/index.js",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/views/dmas.html",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/views/regions.html",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/scripts/controllers/regions.js",
+		"/Users/mconover/Desktop/pint_logo.png",
+		"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/.yo-rc.json",
+		"/Users/mconover/mediamath/pint/pi-disclaimer/disclaimer/api.py",
+		"/Users/mconover/mediamath/pint/pi_tools/app/templates/base.html",
+		"/Users/mconover/mediamath/pint/pi_tools/app/static/js/apibase.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/spec/concept-spec.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/models/Entity.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/spec/entity-spec.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/spec/uploader-spec.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/package.json",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/schema/page_post_fbx.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/schema/standard_fbx.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/uploader.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/karma.conf.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/node_modules/babel-polyfill/README.md",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/api/api.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/spec/fbx-spec.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/node_modules/isemail/lib/index.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/.babelrc",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/models/Creative.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/node_modules/babyparse/package.json",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/dist/js/bundle.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/app.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/.gitignore",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/api/login.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/spec/bundle.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/components/fbx_input.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/components/export.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/gulpfile.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/spec/creative-spec.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/fbx.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/node_modules/joi-browser/dist/joi-browser.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/spec/support/jasmine.json",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/run_tests.js",
+		"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src/spec/fbx-spec.js",
+		"/Users/mconover/Library/Application Support/Sublime Text 3/Packages/User/Jasmine.sublime-settings",
+		"/Users/mconover/mediamath/pint/mm-ng-skeleton/build/karma-unit.js",
+		"/Users/mconover/mediamath/pint/mm-ng-skeleton/README.md",
+		"/Users/mconover/mediamath/pint/mm-ng-skeleton/changelog.tpl",
+		"/Users/mconover/mediamath/pint/mm-ng-skeleton/.gitmessage",
+		"/Users/mconover/mediamath/queryselector-bug-maybe.html",
+		"/Users/mconover/mediamath/compass/src/js/libs/submodules/datejs/build/date.js",
+		"/Users/mconover/mediamath/compass/src/js/libs/T1/T1.js",
+		"/Users/mconover/mediamath/compass/src/js/libs/jquery/jquery.js",
+		"/Users/mconover/mediamath/compass/src/js/libs/T1/T1.Permissions.js",
+		"/Users/mconover/mediamath/compass/src/js/libs/T1/T1.Model.js",
+		"/Users/mconover/mediamath/compass/src/js/libs/T1/T1.Comm.js",
+		"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/views/strategiesGrid.js",
+		"/Users/mconover/mediamath/compass/src/js/utils/orgSynchronization.js",
+		"/Users/mconover/mediamath/compass/src/js/models/userPreferences.js",
+		"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/views/init.js",
+		"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/main.js",
+		"/Users/mconover/mediamath/compass/compass.sublime-project",
+		"/Users/mconover/mediamath/compass/src/js/libs/T1/T1.Collection.js",
+		"/Users/mconover/mediamath/compass/src/js/modules/admin/user/views/createEdit.js",
+		"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/templates/strategyItem.html",
+		"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/templates/init.html",
+		"/Users/mconover/mediamath/compass/src/sass/_campaign-bulkedit.scss",
+		"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/templates/strategies.html",
+		"/Users/mconover/mediamath/compass/src/sass/_uiwidgets.scss"
+	],
+	"find":
+	{
+		"height": 27.0
+	},
+	"find_in_files":
+	{
+		"height": 95.0,
+		"where_history":
+		[
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/, *.py",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test,",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/,",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/test,",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app,",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/,",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/,",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/,",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/,",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/, *.html",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/, ",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/, /Users/mconover/mediamath/pint/pi-bulk-strategy-editor/dist/",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor/app/",
+			"/Users/mconover/mediamath/pint/pi-bulk-strategy-editor",
+			"/Users/mconover/mediamath/pint/pi_tools/app/",
+			"/Users/mconover/mediamath/pint/pi_tools/app/disclaimer",
+			"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src",
+			"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/",
+			"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src",
+			"node_modules/",
+			"/Users/mconover/mediamath/pint/pi-bulk_fbx_creative_uploader/src",
+			"",
+			"/Users/mconover/mediamath/compass/src/js/modules, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.html",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.scss",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.html",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/, ",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit, *.js",
+			"/Users/mconover/mediamath/compass/src/modules/, *.js",
+			"/Users/mconover/mediamath/compass/src/modules/campaigns/bulkedit/, *.js",
+			"/Users/mconover/mediamath/compass/src/modules/campaigns/bulkedit, *.js",
+			"/Users/mconover/mediamath/compass/src/modules/campaign/bulkedit, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.html",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/, ",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.scss",
+			"/Users/mconover/mediamath/compass/src/, .scss",
+			"/Users/mconover/mediamath/compass/src/",
+			"/Users/mconover/mediamath/compass/src/js/modules, *.js ",
+			"/Users/mconover/mediamath/compass/src/js/, *.js ",
+			"/Users/mconover/mediamath/compass/src/js/modules/admin, *.js ",
+			"/Users/mconover/mediamath/compass/src/modules/admin, *.js ",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaigns/bulkedit/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/",
+			"/Users/mconover/mediamath/compass/src/js/modules/",
+			"/Users/mconover/mediamath/compass/src/js/modules/admin/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.html",
+			"/Users/mconover/mediamath/compass/src/js/modules/pixels/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/pixels/",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/pixels, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.scss",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.scss",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/, ",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.scss",
+			"/Users/mconover/mediamath/compass/src/js, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.scss",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign, *.scss",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign, *.js",
+			"/Users/mconover/mediamath/compass/src/js/campaign, *.js",
+			"/Users/mconover/mediamath/compass/, *.html",
+			"/Users/mconover/mediamath/compass/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaigns/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/",
+			"/Users/mconover/mediamath/compass/src/js/modules/",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/, content-holder",
+			"/Users/mconover/mediamath/compass/src/js/",
+			"/Users/mconover/mediamath/compass/src/js/modules/",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/, *.js",
+			"*.scss",
+			"/Users/mconover/mediamath/compass/src/js/, *.js",
+			"/Users/mconover/mediamath/compass/, *.scss",
+			"/Users/mconover/mediamath/compass/",
+			"/Users/mconover/mediamath/compass/src/js/",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/,",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/creatives/,",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/creatives/, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaigns/bulkedit, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/campaign/bulkedit/, *.js",
+			"/Users/mconover/mediamath/compass/modules/campaign, *.js",
+			"/Users/mconover/mediamath/compass/, *.js",
+			"/Users/mconover/mediamath/compass/",
+			"/Users/mconover/mediamath/compass/, *.js",
+			"/Users/mconover/mediamath/compass/, *.html",
+			"/Users/mconover/mediamath/compass/src/js/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/modules/, *.js",
+			"/Users/mconover/mediamath/compass/src/js/, *.js",
+			"/Users/mconover/mediamath/compass/src/, *.js",
+			"/Users/mconover/mediamath/compass/src/",
+			"/Users/mconover/mediamath/compass/src/, *.html",
+			"/Users/mconover/mediamath/compass/src/js, *.html",
+			"/Users/mconover/mediamath/compass/src/js, *.js",
+			"/Users/mconover/mediamath/compass/, *.js",
+			"/Users/mconover/mediamath/compass/, *.scss",
+			"/Users/mconover/mediamath/compass/, *.js",
+			"/Users/mconover/mediamath/compass/. *.js",
+			"/Users/mconover/mediamath/compass/. *js",
+			"/Users/mconover/mediamath/compass/",
+			"/Users/mconover/mediamath/compass/src/js,"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"\"",
+			"mockErrFile",
+			"fit",
+			"data.",
+			"fit",
+			"\"",
+			"dump(element.isolateScope().uploadFiles());\n",
+			"jshint",
+			"download",
+			"serve",
+			"post",
+			"authInterceptorFactory",
+			"301",
+			".htacces",
+			"1.4.9",
+			"t1apibase_",
+			"Service: t1apibase",
+			"\"Service: t1apibase\"",
+			"csvToJson",
+			"csvToJson should be defined",
+			"csvToJson",
+			"csvToJson should be defined",
+			"setBudgetData",
+			"_dataFactory_",
+			"_bulkapibase_",
+			"authInterceptorFactory",
+			",functio",
+			"user",
+			"$scope.user",
+			"el.",
+			"1.3.0",
+			"isolatedScope",
+			".ctrl",
+			"compiledElement",
+			"controller",
+			", ",
+			"directiveElement",
+			"())",
+			"scope.",
+			"scope",
+			".upload",
+			"^1.3.0",
+			"scope",
+			"({});",
+			"\"",
+			"    \n",
+			"$scope",
+			"compile",
+			"element",
+			"serve",
+			"\"",
+			"\"\"",
+			"\"",
+			"\"\"",
+			"\"",
+			"'",
+			"false",
+			"true",
+			"cdnify",
+			"jshint",
+			"'",
+			"jshint",
+			"newer",
+			"jshint",
+			"karma",
+			"^",
+			"karma",
+			"strict",
+			"STRICT",
+			"karma",
+			"load",
+			"connect",
+			"'",
+			"implied",
+			"jshint",
+			"false",
+			"<!--class=search-box-->",
+			"showUploadErrorMessage",
+			"\"",
+			"EMAIL_REGEXP",
+			"email",
+			"getUserObj",
+			"showUploadErrorMessage",
+			"form",
+			"ngModel",
+			"downlo",
+			";",
+			"center-div",
+			";",
+			"routeParams",
+			"$cookies",
+			"\"",
+			"<div class=\"form-group \"",
+			"h1",
+			"h2",
+			"h1",
+			":0px;",
+			"0px",
+			";",
+			"h1",
+			";",
+			"};\n",
+			";",
+			"; ",
+			"mm-inline-box",
+			"mm-",
+			"uglif",
+			"uglify",
+			"ugli",
+			"minif",
+			"self",
+			"showUploadSuccess",
+			"constructObject",
+			"uploadedFile",
+			"addFile",
+			"uploadservice",
+			"UploadService",
+			"primary",
+			"ready",
+			"$q",
+			"ApiBase",
+			"$timeout",
+			"$location",
+			"$routeParams",
+			"$cookies",
+			", ",
+			"userObj",
+			"getEmail"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": true,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1210,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_savvy.file_path": "/Users/mconover/mediamath/pint/pi-template-library/index.html",
+							"git_savvy.repo_path": "/Users/mconover/mediamath/pint/pi-template-library",
+							"incomplete_sync": null,
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 27.0
+	},
+	"input":
+	{
+		"height": 35.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.GitSavvy":
+	{
+		"height": 126.0
+	},
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"output.sftp":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "pi-template-library.sublime-project",
+	"replace":
+	{
+		"height": 50.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"karma.con",
+				"test/karma.conf.js"
+			],
+			[
+				"uploadcs",
+				"app/scripts/directives/uploadCSV.js"
+			],
+			[
+				".edito",
+				".editorconfig"
+			],
+			[
+				"upload",
+				"test/spec/directives/uploadCSV.js"
+			],
+			[
+				"login.h",
+				"app/views/login.html"
+			],
+			[
+				"grunf",
+				"Gruntfile.js"
+			],
+			[
+				"login.js",
+				"app/scripts/controllers/login.js"
+			],
+			[
+				"userser",
+				"app/scripts/services/userService.js"
+			],
+			[
+				"app.js",
+				"app/scripts/app.js"
+			],
+			[
+				"t1ap",
+				"app/scripts/services/t1apibase.js"
+			],
+			[
+				"user",
+				"app/scripts/services/userService.js"
+			],
+			[
+				"apibase",
+				"app/scripts/services/apibase.js"
+			],
+			[
+				"config",
+				"bulk_strategy_editor/config.py"
+			],
+			[
+				"__int",
+				"bulk_strategy_editor/__init__.py"
+			],
+			[
+				"run.py",
+				"run.py"
+			],
+			[
+				"__init",
+				"bulk_strategy_editor/__init__.py"
+			],
+			[
+				"bulkapi",
+				"app/scripts/services/bulkapibase.js"
+			],
+			[
+				"bower.",
+				"bower.json"
+			],
+			[
+				"authinter",
+				"app/scripts/services/authinterceptor.js"
+			],
+			[
+				"uploadcsv",
+				"app/scripts/directives/uploadCSV.js"
+			],
+			[
+				"readme",
+				"README.md"
+			],
+			[
+				"bower.json",
+				"bower.json"
+			],
+			[
+				"gruntfil",
+				"Gruntfile.js"
+			],
+			[
+				"karma",
+				"test/karma.conf.js"
+			],
+			[
+				"t1apiase",
+				"app/scripts/services/t1apibase.js"
+			],
+			[
+				"main.js",
+				"app/scripts/controllers/main.js"
+			],
+			[
+				"piutil",
+				"app/scripts/controllers/piUtil.js"
+			],
+			[
+				"datafac",
+				"app/scripts/services/datafactory.js"
+			],
+			[
+				"bulkapibase",
+				"app/scripts/services/bulkapibase.js"
+			],
+			[
+				"authin",
+				"app/scripts/services/authinterceptor.js"
+			],
+			[
+				"karmaco",
+				"test/karma.conf.js"
+			],
+			[
+				"t1apibase",
+				"app/scripts/services/t1apibase.js"
+			],
+			[
+				".hta",
+				"app/.htaccess"
+			],
+			[
+				"test.jshint",
+				"test/.jshintrc"
+			],
+			[
+				"about.js",
+				"test/spec/controllers/about.js"
+			],
+			[
+				"specutils.js",
+				"test/spec/controllers/utils.js"
+			],
+			[
+				"piu",
+				"app/scripts/controllers/piUtil.js"
+			],
+			[
+				"app/.js",
+				"app/.jshintrc"
+			],
+			[
+				"controllers/log",
+				"app/scripts/controllers/login.js"
+			],
+			[
+				".jshint",
+				".jshintrc"
+			],
+			[
+				"gruntf",
+				"Gruntfile.js"
+			],
+			[
+				"packa",
+				"package.json"
+			],
+			[
+				"index.html",
+				"app/index.html"
+			],
+			[
+				".jshintrc",
+				"test/.jshintrc"
+			],
+			[
+				"pack",
+				"package.json"
+			],
+			[
+				"spec/",
+				"test/spec/controllers/about.js"
+			],
+			[
+				"inde",
+				"app/index.html"
+			],
+			[
+				"index",
+				"app/index.html"
+			],
+			[
+				"index.ht",
+				"app/index.html"
+			],
+			[
+				"angularjs",
+				"bower_components/angular/angular.js"
+			],
+			[
+				"editor",
+				".editorconfig"
+			],
+			[
+				"login.ht",
+				"app/views/login.html"
+			],
+			[
+				"loginjs",
+				"app/scripts/controllers/login.js"
+			],
+			[
+				"grunt",
+				"Gruntfile.js"
+			],
+			[
+				"uploadser",
+				"app/scripts/services/UploadService.js"
+			],
+			[
+				"apibas",
+				"app/scripts/services/apibase.js"
+			],
+			[
+				"main.ht",
+				"app/views/main.html"
+			],
+			[
+				"app.j",
+				"app/scripts/app.js"
+			],
+			[
+				"main.html",
+				"app/views/main.html"
+			],
+			[
+				"bootstrap",
+				"bower_components/bootstrap/dist/css/bootstrap.css"
+			],
+			[
+				"dist/in",
+				"dist/index.html"
+			],
+			[
+				"read",
+				"README.md"
+			],
+			[
+				"login",
+				"app/scripts/controllers/login.js"
+			],
+			[
+				"jshint",
+				".jshintrc"
+			],
+			[
+				"upload.js",
+				"app/scripts/directives/upload.js"
+			],
+			[
+				"uploadse",
+				"app/scripts/services/UploadService.js"
+			],
+			[
+				"uploadservice",
+				"app/scripts/services/UploadService.js"
+			],
+			[
+				"angu",
+				"bower_components/angular/angular.js"
+			],
+			[
+				"angular",
+				"bower_components/angular/angular.js"
+			],
+			[
+				"index.htm",
+				"app/index.html"
+			],
+			[
+				".g",
+				".gitignore"
+			],
+			[
+				"jshin",
+				"node_modules/.bin/jshint"
+			],
+			[
+				"package",
+				"package.json"
+			],
+			[
+				"readm",
+				"README.md"
+			],
+			[
+				"distindex",
+				"dist/index.html"
+			],
+			[
+				".jshin",
+				".jshintrc"
+			],
+			[
+				".yo",
+				".yo-rc.json"
+			],
+			[
+				"gruntfi",
+				"Gruntfile.js"
+			],
+			[
+				"discal",
+				"app/static/js/disclaimer.js"
+			],
+			[
+				"loginviews",
+				"app/login/views.py"
+			],
+			[
+				"dis",
+				"app/static/js/disclaimer.js"
+			],
+			[
+				"disclamer",
+				"app/static/css/disclaimer.css"
+			],
+			[
+				"entity-",
+				"spec/entity-spec.js"
+			],
+			[
+				"uploader",
+				"src/uploader.js"
+			],
+			[
+				"models/cr",
+				"src/models/Creative.js"
+			],
+			[
+				"bundle",
+				"dist/js/bundle.js"
+			],
+			[
+				"spec/bun",
+				"spec/bundle.js"
+			],
+			[
+				"spec/bujn",
+				"spec/bundle.js"
+			],
+			[
+				"bundl",
+				"dist/js/bundle.js"
+			],
+			[
+				"packag",
+				"package.json"
+			],
+			[
+				".git",
+				".gitignore"
+			],
+			[
+				"joi-brows",
+				"node_modules/joi-browser/dist/joi-browser.js"
+			],
+			[
+				"api.js",
+				"api/api.js"
+			],
+			[
+				"isemailindex.js",
+				"node_modules/isemail/lib/index.js"
+			],
+			[
+				"gitigno",
+				".gitignore"
+			],
+			[
+				"run_t",
+				"src/run_tests.js"
+			],
+			[
+				"app.",
+				"src/app.js"
+			],
+			[
+				"karma-un",
+				"~/mediamath/pint/mm-ng-skeleton/build/karma-unit.js"
+			],
+			[
+				"examples",
+				"src/app/examples/examples.js"
+			],
+			[
+				"postmessage.js",
+				"src/common/postMessage/PostMessage.js"
+			],
+			[
+				"build.",
+				"build.config.js"
+			],
+			[
+				"postm",
+				"src/common/postMessage/postMessage.spec.js"
+			],
+			[
+				".gitmes",
+				".gitmessage"
+			],
+			[
+				"",
+				"Markdown Cheatsheet"
+			],
+			[
+				"date.js",
+				"src/js/libs/submodules/datejs/build/date.js"
+			],
+			[
+				"sessionuserper",
+				"src/js/models/sessionUserPermissions.js"
+			],
+			[
+				"sessions",
+				"src/js/models/sessionUser.js"
+			],
+			[
+				"models/userpr",
+				"src/js/models/userPreferences.js"
+			],
+			[
+				"t1.per",
+				"src/js/libs/T1/T1.Permissions.js"
+			],
+			[
+				"t1comm",
+				"src/js/libs/T1/T1.Comm.js"
+			],
+			[
+				"orgsyn",
+				"src/js/utils/orgSynchronization.js"
+			],
+			[
+				"strategiesgrid",
+				"src/js/modules/campaign/bulkedit/views/strategiesGrid.js"
+			],
+			[
+				"t1collection",
+				"src/js/libs/T1/T1.Collection.js"
+			],
+			[
+				"init.js",
+				"src/js/modules/campaign/bulkedit/views/init.js"
+			],
+			[
+				"sharedfilter",
+				"src/js/modules/shared/views/filter.js"
+			],
+			[
+				"dmp.html",
+				"src/js/modules/admin/shared/templates/dmp.html"
+			],
+			[
+				"t1.tool",
+				"src/js/libs/T1/T1.Tooltip.js"
+			],
+			[
+				"init.html",
+				"src/js/modules/campaign/bulkedit/templates/init.html"
+			],
+			[
+				"bulkedit",
+				"src/sass/_campaign-bulkedit.scss"
+			],
+			[
+				"strategiesgri",
+				"src/js/modules/campaign/templates/copyStrategiesGrid.html"
+			],
+			[
+				"bulkedscss",
+				"src/sass/_campaign-bulkedit.scss"
+			],
+			[
+				"collectionstrateg",
+				"src/js/collections/strategies.js"
+			],
+			[
+				"itemselec",
+				"src/js/modules/targeting/shared/itemSelectionBehavior.js"
+			],
+			[
+				"modelsex",
+				"src/js/models/exchangeSeat.js"
+			],
+			[
+				"collections/str",
+				"src/js/collections/strategies.js"
+			],
+			[
+				"user.js",
+				"src/js/modules/admin/user/views/users.js"
+			],
+			[
+				"collectioncampa",
+				"src/js/collections/campaigns.js"
+			],
+			[
+				"t1filter",
+				"src/js/libs/T1/T1.Filterable.js"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"~/mediamath/t1apps_dev_php_env/smart_pixel/smart_pixel_api.sublime-project"
+			],
+			[
+				"api",
+				"~/mediamath/t1apps_dev_php_env/smart_pixel/smart_pixel_api.sublime-project"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 375.0,
+		"last_filter": "serialize",
+		"selected_items":
+		[
+			[
+				"serialize",
+				"serialize"
+			],
+			[
+				"format",
+				"format"
+			],
+			[
+				"setfav",
+				"setFavorite"
+			],
+			[
+				"isFavor",
+				"isFavorite"
+			],
+			[
+				"signature",
+				"Signature"
+			],
+			[
+				"EventHub",
+				"eventhubEvents"
+			],
+			[
+				"add",
+				"add"
+			],
+			[
+				"transitionTo",
+				"transitionTo"
+			],
+			[
+				"transitionto",
+				"transitionTo"
+			],
+			[
+				"mmsubm",
+				"mmSubmit"
+			],
+			[
+				"logicD",
+				"logicDelete"
+			],
+			[
+				"logicDel",
+				"logicDelete"
+			],
+			[
+				"logicDele",
+				"logicDelete"
+			],
+			[
+				"mmSu",
+				"mmSubmit"
+			],
+			[
+				"showdelet",
+				"showDeleteModal"
+			],
+			[
+				"showDele",
+				"showDeleteModal"
+			],
+			[
+				"alert",
+				"closeAlert"
+			],
+			[
+				"onlyCond",
+				"onlyConditionSet"
+			],
+			[
+				"comparis",
+				"comparisonErrorMsg"
+			],
+			[
+				"validClass",
+				"validClass"
+			],
+			[
+				"validateForm",
+				"validateForm"
+			],
+			[
+				"everyt",
+				"everythingValid"
+			],
+			[
+				"logicCreate",
+				"logicCreate"
+			],
+			[
+				"addCon",
+				"addConditionSet"
+			]
+		],
+		"width": 741.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 280.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
