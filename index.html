@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PINT Template Library</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body ng-app="pintTemplateLibrary">
+  <nav class="navbar navbar-static-top">
+    <div class="container">
+      <div class="navbar-header">
+        <h3 class="navbar-text">PINT Template Library</h3>
+        <div ng-model="user" ng-show="user" class="navbar-text navbar-left">{{ user.email }}</div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        Choose a strategy template to clone more strategies. Once the cloned strategies have been edited and validate you can submit one or all.
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+      <div ng-controller="strategyTemplate" class="col-sm-12">
+        <form action="POST" name="clone-validator" class="form-inline" novalidate>
+
+          <div class="form-group">
+            <label class="sr-only" for="strategy-name">Strategy Name</label>
+            <input type="text" ng-model="clone.strategyName" name="strategy-name" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
+          </div>
+
+
+          <div class="form-group">
+            <label class="sr-only" for="geo-target">Geography Targeting</label>
+            <input type="text" ng-model="clone.geoTarget" name="geo-target" class="form-control" id="clone.geo-target" placeholder="Geography Targeting" required="required" typeahead="geo as geo.displayName for geo in getAllGeoTargets($viewValue)" typeahead-on-select="onGeoTargetSelect()">
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- 
+  https://developer.mediamath.com/docs/read/execution_and_management_api/Strategies
+  https://mediamath.app.box.com/notes/56404229598?s=gzsuyt2rw1gy096adh27ohqt1mi29v0p
+  https://pi-qa.mediamath.com/tools/bulk_strategy_editor/#/ for some 
+  -->
+
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+  <script src="node_modules/angular-touch/angular-touch.min.js"></script>
+  <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <script src="node_modules/firebase/lib/firebase-web.js"></script> -->
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  <script type="text/javascript">
+    var app = angular.module('pintTemplateLibrary', [])
+    .controller('strategyTemplate', function($scope, $http) {
+
+      var session = $http.get('https://t1qa1.mediamath.com/api/v2.0/session', { withCredentials: true});
+      console.info(session);
+
+      $scope.master = {};
+
+      $scope.update = function(user) {
+        $scope.master = angular.copy(user);
+      };
+
+      $scope.reset = function(form) {
+        if (form) {
+          form.$setPristine();
+          form.$setUntouched();
+        }
+        $scope.user = angular.copy($scope.master);
+      };
+
+      $scope.reset();
+    });
+  </script>
+</body>
+</html>
+
