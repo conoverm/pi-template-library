@@ -12,6 +12,26 @@ if RUN_LEVEL != 'prod':
 else:
 	DEBUG = False
 
+ENV_CONFIG = {
+	'dev': ('t1sandbox.mediamath.com', 88),
+	'qa': ('t1qa1.mediamath.com', 1268),
+	'prod': ('api.mediamath.com', 1209),
+}
+
+BASE_CONFIG = {
+	'127.0.0.1:5000': ENV_CONFIG['qa'],
+	'localhost:5000': ENV_CONFIG['qa'],
+	'localhost.com:5000': ENV_CONFIG['qa'],
+	'nate-dawg.mediamath.com:5000': ENV_CONFIG['qa'],
+	'sm.mediamath.com:5000': ENV_CONFIG['qa'],
+	'ab.mediamath.com:5000': ENV_CONFIG['qa'],
+	'pi.mediamath.com': ENV_CONFIG['prod'],
+	'cs.mediamath.com': ENV_CONFIG['prod'],
+	'pi-qa.mediamath.com': ENV_CONFIG['qa'],
+	'cs-qa.mediamath.com': ENV_CONFIG['qa'],
+	'ewr-cs-n2.mediamath.com': ENV_CONFIG['qa'], # RANDOM
+}
+
 SECRET_KEY = os.environ.get('SECRET_KEY', 'DEVELOPMENT_KEY')
 
 SINGULAR = {
