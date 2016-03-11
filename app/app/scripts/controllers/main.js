@@ -16,6 +16,7 @@ angular.module('pintTemplateLibrary')
   // download the data into a local object
 
   $scope.templates = $firebaseArray(ref)
+  $scope.audiences = [73562, 98746]
 
   $scope.templates.$loaded()
     .then(function(x) {
@@ -37,7 +38,11 @@ angular.module('pintTemplateLibrary')
       template.selected = true
       $scope.newStrategies = []
       for (var i = 6; i >= 0; i--) {
-      	$scope.newStrategies[i] = $scope.selectedTemplate.template
+      	$scope.newStrategies[i] = angular.copy($scope.selectedTemplate.template)
+      	console.log(i)
+      	$scope.newStrategies[i].id = i
+      	// $scope.newStrategies[i].concepts = [{}]
+      	console.log($scope.newStrategies[i])
       };
 
       console.log($scope.newStrategies)
