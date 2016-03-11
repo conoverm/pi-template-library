@@ -35,6 +35,13 @@ angular.module('pintTemplateLibrary')
     $scope.selectTemplate = function(template){
       $scope.selectedTemplate = template
       template.selected = true
+      $scope.newStrategies = []
+      for (var i = 6; i >= 0; i--) {
+      	$scope.newStrategies[i] = $scope.selectedTemplate.template
+      };
+
+      console.log($scope.newStrategies)
+
     }
   
 
