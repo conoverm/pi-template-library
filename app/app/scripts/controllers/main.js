@@ -41,7 +41,7 @@ angular.module('pintTemplateLibrary')
       for (var i = 4; i >= 0; i--) {
       	$scope.newStrategies[i] = angular.copy($scope.selectedTemplate.template)
       	console.log(i)
-      	$scope.newStrategies[i].id = i
+      	// $scope.newStrategies[i].id = i
       	// $scope.newStrategies[i].concepts = [{}]
       	console.log($scope.newStrategies[i])
       };
@@ -114,7 +114,9 @@ angular.module('pintTemplateLibrary')
   
   var session = $http.get('https://t1qa1.mediamath.com/api/v2.0/session', { withCredentials: true})
   .then(function(response){
-    console.info(response);
+    console.log(response);
+    var session = response.data.session.sessionid
+    document.cookie = 'adama_session=' + session + ';domain=' + location.hostname + ';path=/';
     // hey leif
     // cookie = response.data.session.sessionid
   });
@@ -124,10 +126,26 @@ angular.module('pintTemplateLibrary')
 
   $scope.saveStrategies = function(){
 
+    var stratsToPost = []
   	for (var i = $scope.newStrategies.length - 1; i >= 0; i--) {
-  		$scope.newStrategies[i].name = $scope.selectedTemplate.name + '_' + $scope.newStrategies[i].pixel_target_expr
-  		console.log($scope.newStrategies[i])
+  		var modifiedStrat = {'properties': ''}
+      $scope.newStrategies[i].name = $scope.selectedTemplate.name + '_' + $scope.newStrategies[i].pixel_target_expr
+  		delete $scope.newStrategies[i]['pixel_target_expr']
+      console.log($scope.newStrategies[i])
+      modifiedStrat['properties'] = $scope.newStrategies[i]
+      stratsToPost.push(modifiedStrat)
   	};
+
+    console.log(stratsToPost)
+
+    $http({
+        method: "post",
+        url: 'http://ap.mediamath.com:5000/strategies/create',
+        data: stratsToPost,
+        headers: {'Content-Type': 'application/json'}
+    }).then(function(response) {
+      console.log(response)
+    });
 
   }
 

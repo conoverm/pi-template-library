@@ -117,6 +117,7 @@ def edit_strategies():
 		logging.info('Error: {}\nCaused traceback: {}'.format(str(e),
 						traceback.format_exc()))
 		return return_status('Error\n{}'.format(str(e)), code=400)
+	
 	data = json.loads(request.data)
 
 	if isinstance(data, dict):
@@ -209,6 +210,8 @@ def edit_strategies():
 				strategy.pixel_target_expr['include']['operator'] = include_op
 			if exclude_op in ('AND', 'OR'):
 				strategy.pixel_target_expr['exclude']['operator'] = exclude_op
+
+		strategy.properties['version'] = 0
 
 		# POST Strategy edits & logging
 		try:

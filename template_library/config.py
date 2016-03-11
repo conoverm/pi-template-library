@@ -13,7 +13,7 @@ else:
 	DEBUG = False
 
 ENV_CONFIG = {
-	'dev': ('t1sandbox.mediamath.com', 88),
+	'dev': ('t1qa1.mediamath.com', 88),
 	'qa': ('t1qa1.mediamath.com', 1268),
 	'prod': ('api.mediamath.com', 1209),
 }
@@ -23,6 +23,7 @@ BASE_CONFIG = {
 	'localhost:5000': ENV_CONFIG['qa'],
 	'localhost.com:5000': ENV_CONFIG['qa'],
 	'nate-dawg.mediamath.com:5000': ENV_CONFIG['qa'],
+	'ap.mediamath.com:5000': ENV_CONFIG['qa'],
 	'sm.mediamath.com:5000': ENV_CONFIG['qa'],
 	'ab.mediamath.com:5000': ENV_CONFIG['qa'],
 	'pi.mediamath.com': ENV_CONFIG['prod'],
