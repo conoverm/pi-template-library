@@ -1,0 +1,82 @@
+  
+    <div class="row">
+      <div class="col-sm-10">
+        Choose a strategy template to clone more strategies. Once the cloned strategies have been edited and validated you can submit them.
+      </div>
+      <!-- <select name="singleSelect" ng-model="one" ng-click="showSelected()">
+        <option ng-repeat="template in templates" value="{{template}}">{{template.name}}</option>
+      </select> -->
+    </div>
+    <br>
+    <div class="col-sm-10">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Template Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">
+            <td>{{template.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+<!--     <p class="" ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">{{template.name}}</p> -->
+    </div>
+  </div>
+  
+  <!-- <div class="container"> -->
+    <div class="row">
+     
+      </div>
+      <div class="col-sm-4">
+        <h2 ng-show="selectedTemplate">{{selectedTemplate.name}}</h2>       
+      </div>
+
+
+        <table class="table">
+          <thead ng-show="selectedTemplate">
+            <tr>
+              <th>Strategy Name</th>
+              <th>Pixel ID</th>
+              <th>Concept ID</th>
+              <th>Budget</th>
+              <th>Goal Value</th>
+              <th>Audience</th>
+            </tr>       
+          </thead>
+          <form name="goalForm">
+            <tbody>       
+              <tr ng-repeat = "newStrategy in newStrategies">
+                <td width="300px"><!-- <input width="300px" value="{{selectedTemplate.name}}_{{newStrategy.pixel_target_expr}}" type="text" ng-required="true"name="input"> -->{{selectedTemplate.name}}_{{newStrategy.pixel_target_expr}}</td>
+                <td><input ng-model="newStrategy.pixel_target_expr" type="number" ng-required="true"name="input"></td>
+                <td><input ng-model="newStrategy.concepts" type="number" ng-required="true"name="input"></td>
+                <td><input ng-model="newStrategy.budget" type="number" ng-disabled="true" ng-required="true"name="input"></td>
+                <td><input ng-model="newStrategy.goal_value" type="number" ng-disabled="true" ng-required="true"name="input"></td>
+                <td><input ng-model="selectedTemplate.audience" type="number" ng-disabled="true" ng-required="true"name="input"></td>
+              </tr>       
+            </tbody>
+          </form> 
+        </table> 
+        <button type="submit" class="btn btn-primary" ng-click="saveStrategies()" ng-show="selectedTemplate">Save Strategies</button>
+        <br>
+      <div class="col-lg-6">
+        <h2>{{selectedTemplate.name}} Template Values</h2>
+        <table class="table table-striped table-hover col-sm-4">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="(key, value) in selectedTemplate.template">
+              <td>{{key}}</td>
+              <td>{{value}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>        
+
+    <!-- </div>
+  </div>

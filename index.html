@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PINT Template Library</title>
+  <link href="node_modules/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+  <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+<![endif]-->
+</head>
+<body ng-app="pintTemplateLibrary" ng-controller="strategyTemplate">
+  <nav class="navbar navbar-static-top">
+  <div class="navbar-header">
+        <h3 class="navbar-text">PINT Template Library</h3>
+        <div ng-model="user" ng-show="user" class="navbar-text navbar-left">{{ user.email }}</div>
+      </div>
+    </div>
+  </nav>
+<div class="container">
+  <div class="row">
+    <div class="col-lg-6">
+      <p class="lead">Choose a strategy template to clone more strategies. Once the cloned strategies have been edited and validated you can submit them.
+      </p>
+    </div>
+    <div class="col-lg-6">
+      <div>
+        <h3>Available Strategies</h3>
+      </div>
+      <div class="col-lg-6">
+        <p href="#" class="btn-default" ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'btn-success': template.name == selectedTemplate.name}">{{template.name}}</p>
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+  <div class="row">
+  <form action="POST" name="clone-validator" class="form-horizontal" novalidate  autocomplete="off">
+  </div>
+  <div class="row">
+    <p>Create New From Template</p>
+      <div class="col-lg-6" id="formgroup">
+        <div class="form-group">
+          <pre>Model: {{clone.geoSelected | json}}</pre>
+            <label class="sr-only control-label" for="strategyname">Strategy Name</label>
+            <div class="col-lg-10">
+              <input type="text" ng-model="clone.strategyName" name="strategyname" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
+            </div>
+        </div>
+        <div class="form-group">
+          <label class="sr-only control-label" for="strategy-name">Geo Target</label>
+            <div class="col-lg-10">
+              <input type="text" ng-model="clone.geoSelected" placeholder="Locations loaded via $http"
+              typeahead-min-length="3"
+              uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
+              typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+            </div>
+        <div class="col-lg-6">
+          <div class="form-group">
+            <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+            <div ng-show="noResults">
+              <i class="glyphicon glyphicon-remove"></i> No Results Found
+            </div>
+          </div>
+          <div class="form-group">
+            <a href="#" class="btn btn-primary" ng-model="Strategy" ng-click="saveNewStrat(template)">submit</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="col-lg-6">
+        <h2>{{selectedTemplate.name}} Template Values</h2>
+        <table class="table table-striped table-hover col-sm-4">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="(key, value) in selectedTemplate.template">
+              <td>{{key}}</td>
+              <td>{{value}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+</form>
+      <!-- <select name="singleSelect" ng-model="one" ng-click="showSelected()">
+        <option ng-repeat="template in templates" value="{{template}}">{{template.name}}</option>
+      </select> -->
+
+  <!--
+  https://developer.mediamath.com/docs/read/execution_and_management_api/Strategies
+  https://mediamath.app.box.com/notes/56404229598?s=gzsuyt2rw1gy096adh27ohqt1mi29v0p
+  https://pi-qa.mediamath.com/tools/bulk_strategy_editor/#/ for some
+  -->
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/angular/angular.min.js"></script>
+  <script src="node_modules/angular-touch/angular-touch.min.js"></script>
+  <script src="node_modules/angular-animate/angular-animate.min.js"></script>
+  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  <!-- <script src="node_modules/firebase/lib/firebase-web.js"></script> -->
+  <script src="https://cdn.firebase.com/js/client/2.4.1/firebase.js"></script>
+  <script src="https://cdn.firebase.com/libs/angularfire/1.1.3/angularfire.min.js"></script>
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap.js"></script>
+  <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+  <script type="text/javascript">
+    var app = angular.module('pintTemplateLibrary', [
+    'firebase',
+    'ngAnimate',
+    'ngTouch',
+    'ui.bootstrap'
+    ])
+    .controller('strategyTemplate', function($scope, $location, $http, $firebaseObject, $firebaseArray) {
+$scope.Strategy = function Strategy(options) {
+        this.properties = {}
+        this.properties.pixel_target_expr = {}
+        this.properties.pixel_target_expr.exclude = {}
+        this.properties.pixel_target_expr.include = {}
+        this.properties.start_date = options.start_date || Date.now()+3600
+        this.properties.end_date = options.stat_date || Date.now()+36000
+        this.properties.description = options.description || ""
+        this.properties.use_campaign_start = options.use_campaign_start || 1
+        this.properties.use_campaign_end = options.use_campaign_end || 1
+        this.properties.pixel_target_expr.exclude.operator = ""
+        this.properties.pixel_target_expr.exclude.pixels = []
+        this.properties.pixel_target_expr.include.operator = ""
+        this.properties.pixel_target_expr.include.pixels = ""
+        this.properties.budget = options.budget || 0
+        this.properties.campaign_id = options.campaign_id
+        this.properties.frequency_type = options.frequency_type || ""
+        this.properties.goal_type = options.goal_type || ""
+        this.properties.goal_value = options.goal_value || ""
+        this.properties.max_bid = options.max_bid || ""
+        this.properties.name = options.name || "My New Strategy"
+        this.properties.pacing_amount = options.pacing_amount || 0
+        this.properties.type = options.type || "CPM"
+        this.properties.version = 0
+      //optional
+        this.properties.status=options.status || "active"
+        this.properties.audience_segment_exclude_op=options.audience_segment_exclude_op || ""
+        this.properties.audience_segment_include_op=options.audience_segment_include_op || ""
+        this.properties.bid_aggressiveness=options.bid_aggressiveness || ""
+        this.properties.bid_price_is_media_only=options.bid_price_is_media_only || ""
+        this.properties.currency_code=options.currency_code || ""
+        this.properties.description=options.description || ""
+        this.properties.effective_goal_value=options.effective_goal_value || ""
+        this.properties.end_date=options.end_date || ""
+        this.properties.frequency_amount=options.frequency_amount || ""
+        this.properties.frequency_interval=options.frequency_interval || ""
+        this.properties.impression_cap=options.impression_cap || ""
+        this.properties.media_type=options.media_type || ""
+        this.properties.pacing_interval=options.pacing_interval || ""
+        this.properties.pacing_type=options.pacing_type || ""
+        this.properties.pixel_target_expr=options.pixel_target_expr || ""
+        this.properties.roi_target=options.roi_target || ""
+        this.properties.run_on_all_exchanges=options.run_on_all_exchanges || ""
+        this.properties.run_on_all_pmp=options.run_on_all_pmp || ""
+        this.properties.run_on_display=options.run_on_display || ""
+        this.properties.run_on_mobile=options.run_on_mobile || ""
+        this.properties.run_on_streaming=options.run_on_streaming || ""
+        this.properties.site_selectiveness=options.site_selectiveness || ""
+        this.properties.site_restriction_transparent_urls=options.site_restriction_transparent_urls || ""
+        this.properties.start_date=options.start_date || ""
+        this.properties.supply_type=options.supply_type || ""
+        this.properties.use_campaign_end=options.use_campaign_end || ""
+        this.properties.use_campaign_start=options.use_campaign_start || ""
+        this.properties.use_mm_freq=options.use_mm_freq || ""
+        this.properties.use_optimization=options.use_optimization || ""
+        this.properties.zone_name=options.zone_name || ""
+    }
+      var ref = new Firebase("https://strategytemplates.firebaseio.com");
+      // $scope.selectedTemplate = {}
+      // download the data into a local object
+
+      $scope.templates = $firebaseArray(ref)
+
+      $scope.templates.$loaded()
+        .then(function(x) {
+          console.log($scope.templates)
+        })
+        .catch(function(error) {
+          console.log("Error:", error);
+        });
+
+        $scope.showSelected = function(){
+          console.log('show selected')
+          console.log($scope)
+          console.log('show next template')
+          console.log($scope.templates)
+          console.log($scope.one)
+        }
+
+        $scope.selectTemplate = function(template){
+          $scope.selectedTemplate = template
+          template.selected = true
+          console.log("meow")
+          console.log($scope.selectedTemplate)
+          // set template here newTemplate.properties. =
+        }
+
+        $scope.saveNewStrat = function(template){
+          //template.selected = true
+          var newTemplate = new $scope.Strategy(template)
+          var config = {
+          headers : {
+            'Content-Type': 'application/json'
+          }
+        }
+        $http.post('http://localhost:5000/strategies/create', newTemplate, config)
+          .success(function (data, status, headers, config) {
+              console.log(data);
+            })
+        }
+
+      var t1endpoint = 'https://t1qa1.mediamath.com/api/v2.0/';
+
+      /*
+       ok here's the session nonsense to skip a log in screen.
+       Log into t1qa1.mediamath.com and open this project under SOMETHING.mediamath.com (the hosts
+       file hack we all use).
+
+       Serve this project. I just use `serve`. (npm install -g serve, https://www.npmjs.com/package/serve)
+
+       Open the url to this served project: it will be SOMETHING.mediamath.com:3000
+
+       The cookie you got by logging into t1qa1 will be in your browser and will be sent to adama
+       because of the magic header `withCredentials: true`.
+       */
+
+      var session = $http.get('https://t1qa1.mediamath.com/api/v2.0/session', { withCredentials: true})
+      .then(function(response){
+        console.info(response);
+        // hey leif
+        // cookie = response.data.session.sessionid
+      });
+
+      $scope.data = $firebaseObject(ref);
+      $scope.clone = {};
+
+      $scope.getLocation = function(val) {
+        console.info('getlocation', val)
+        return $http({
+          method: 'get',
+          url: t1endpoint + 'target_values?dimension=REGN&sort_by=name',
+          params: {
+            order_by: 'descending',
+            page_limit: '20',
+            q: 'name=:' + val + '*'
+          },
+          withCredentials: true
+        }).then(function(response){
+
+          if (response.status !== 200){
+            $scope.errorMessage = 'No targets found. Please try again later.';
+            $scope.showErrorMessage = true;
+            $timeout(function(){
+              $scope.showErrorMessage = null;
+            }, 10000);
+          } else {
+            console.info(res)
+            var res = response.data.entities.entity;
+            if(res.length === 0){
+              //skip displaying the error message for IDs, since they are not auto suggested.
+              if(queryTerm[0] != '#'){
+                $scope.errorMessage = 'No targets found. Please try again later.';
+                $scope.showErrorMessage = true;
+              }
+            } else{
+              var targets = [];
+              angular.forEach(res, function(item) {
+                var obj = {
+                  'id': item.id,
+                  'name': item.name,
+                  'displayName': item.name + ' - ' + item.id
+                };
+                targets.push(obj);
+              });
+              return targets;
+            }
+          }
+        });
+      };
+    });
+
+
+
+      // $scope.data.$loaded().then(function(data){
+      //   $scope.data.editable = 'concepts, region, budget'
+      //   $scope.data.template = {
+
+      //     'bid_aggressiveness': "50.00",
+      //     'bid_price_is_media_only': true,
+      //     'budget': 1000000,
+      //     'campaign_id': 12345,
+      //     'effective_goal_value': 11.15,
+      //     'frequency_amount': 1,
+      //     'frequency_interval': "day",
+      //     'frequency_type': "asap",
+      //     'goal_type': "spend",
+      //     'goal_value': 12.25,
+      //     'max_bid': 3.00,
+      //     'media_type': "DISPLAY",
+      //     'pacing_amount': 200,
+      //     'pacing_interval': "day",
+      //     'pacing_type': "even",
+      //     'run_on_all_exchanges': true,
+      //     'run_on_all_pmp': false,
+      //     'run_on_display': true,
+      //     'run_on_mobile': true,
+      //     'run_on_streaming': false,
+      //     'site_restriction_transparent_urls': false,
+      //     'site_selectiveness': "REDUCED",
+      //     'supply_type': "RTB",
+      //     'type': "AUD",
+      //     'use_campaign_end': true,
+      //     'use_campaign_start': true,
+      //     'use_mm_freq': false,
+      //     'use_optimization': true
+      //   }
+
+      //   $scope.data.name = 'Dell Enterprise REM'
+
+      //   $scope.data.$save().then(function(ref) {
+      //     ref.key() === $scope.data.$id; // true
+      //   }, function(error) {
+      //     console.log("Error:", error);
+      //   });
+
+      // })
+  </script>
+</body>
+</html>
+
