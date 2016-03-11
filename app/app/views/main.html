@@ -1,6 +1,6 @@
-  <div class="container">
+  
     <div class="row">
-      <div class="col-sm-4">
+      <div class="col-sm-10">
         Choose a strategy template to clone more strategies. Once the cloned strategies have been edited and validated you can submit them.
       </div>
       <!-- <select name="singleSelect" ng-model="one" ng-click="showSelected()">
@@ -8,10 +8,23 @@
       </select> -->
     </div>
     <br>
-    <div class="col-sm-4">
-    <p class="" ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">{{template.name}}</p>
+    <div class="col-sm-10">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>Template Name</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">
+            <td>{{template.name}}</td>
+          </tr>
+        </tbody>
+      </table>
+<!--     <p class="" ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">{{template.name}}</p> -->
     </div>
   </div>
+  
   <!-- <div class="container"> -->
     <div class="row">
      
