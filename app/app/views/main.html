@@ -12,33 +12,19 @@
     <p class="" ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">{{template.name}}</p>
     </div>
   </div>
-  <div class="container">
+  <!-- <div class="container"> -->
     <div class="row">
      
       </div>
       <div class="col-sm-4">
-        <h2 ng-show="selectedTemplate">{{selectedTemplate.name}} Template Values</h2>
-        <table class="table col-sm-4">
-          <thead>
-            <tr>
-              <th>Name</th>
-              <th>Value</th>
-            </tr>       
-          </thead>
-          <tbody>       
-            <tr ng-repeat="(key, value) in selectedTemplate.template">
-              <td>{{key}}</td>
-              <td>{{value}}</td>
-            </tr>       
-          </tbody>
-        </table>         
+        <h2 ng-show="selectedTemplate">{{selectedTemplate.name}} Template Values</h2>       
       </div>
 
 
 
 
 
-    <form action="POST" name="clone-validator" class="form-inline col-sm-12" novalidate  autocomplete="off">
+    <!-- <form action="POST" name="clone-validator" class="form-inline col-sm-12" novalidate  autocomplete="off">
       <div class="row">
       
       <div class="form-group">1.</div>
@@ -187,6 +173,69 @@
       </div>
   <button type="submit" class="btn btn-default">Submit</button>
 
-    </form>      
-    </div>
+    </form>       -->
+
+ <!--    <form>
+
+      <input ng-repeat="newStrat in newStrategies track by newStrat.id">{{newStrat.id}}
+    </form> -->
+
+<!--     <form action="POST" name="clone-validator" class="form-inline col-sm-12" novalidate  autocomplete="off">
+      <div class="row" ng-repeat="newStrat in newStrategies">
+        
+         <div class="form-group">
+          <label class="sr-only" for="strategy-name">Strategy Name</label>
+          <input type="text" ng-model="newStrategy.name" name="strategy-name1" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
+        </div>
+
+        <input type="text" ng-model="newStrategy.geo" placeholder="Geo ID" name="geo1"
+        typeahead-min-length="3"
+        uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
+        typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+        
+        <div class="form-group">
+          <label class="sr-only" for="concepts">Pixel Target ID</label>
+          <input type="text" ng-model="newStrategy.pixel_target_expr" name="pixel_target_id1" class="form-control" id="clone.pixel_target_id" placeholder="Pixel Target ID" required="required" ng-maxlength="64">
+        </div>
+
+        <div class="form-group">
+          <label class="sr-only" for="budget">Budget</label>
+          <input type="text" ng-model="newStrat.budget" name="budget1" class="form-control" id="clone.budget" placeholder="Budget" required="required" ng-disabled="true" ng-maxlength="64">
+        </div>
+
+        <div class="form-group">
+          <label class="sr-only" for="impression_cap">Impression Cap</label>
+          <input type="text" ng-model="newStrategy.impresion_cap" name="impression_cap1" class="form-control" id="clone.impress-cap" placeholder="Impression Cap" required="required" ng-maxlength="64">
+        </div>
+      </form> -->
+  
+
+
+        <table class="table">
+          <thead ng-show="selectedTemplate">
+            <tr>
+              <th>Strategy Name</th>
+              <th>Pixel ID</th>
+              <th>Concept ID</th>
+              <th>Budget</th>
+              <th>Goal Value</th>
+              <th>Audience</th>
+            </tr>       
+          </thead>
+          <form name="goalForm">
+            <tbody>       
+              <tr ng-repeat = "newStrategy in newStrategies">
+                <td width="300px"><!-- <input width="300px" value="{{selectedTemplate.name}}_{{newStrategy.pixel_target_expr}}" type="text" ng-required="true"name="input"> -->{{selectedTemplate.name}}_{{newStrategy.pixel_target_expr}}</td>
+                <td><input ng-model="newStrategy.pixel_target_expr" type="number" ng-required="true"name="input"></td>
+                <td><input ng-model="newStrategy.concepts" type="number" ng-required="true"name="input"></td>
+                <td><input ng-model="newStrategy.budget" type="number" ng-disabled="true" ng-required="true"name="input"></td>
+                <td><input ng-model="newStrategy.goal_value" type="number" ng-disabled="true" ng-required="true"name="input"></td>
+                <td><input ng-model="selectedTemplate.audience" type="number" ng-disabled="true" ng-required="true"name="input"></td>
+              </tr>       
+            </tbody>
+          </form> 
+        </table> 
+        <button type="submit" class="btn btn-primary" ng-click="saveStrategies()" ng-show="selectedTemplate">Save Strategies</button>
+
+    <!-- </div>
   </div>
