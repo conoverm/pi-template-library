@@ -1,0 +1,53 @@
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-4">
+        Choose a strategy template to clone more strategies. Once the cloned strategies have been edited and validated you can submit them.
+      </div>
+      <!-- <select name="singleSelect" ng-model="one" ng-click="showSelected()">
+        <option ng-repeat="template in templates" value="{{template}}">{{template.name}}</option>
+      </select> -->
+    </div>
+    <br>
+    <div class="col-sm-4">
+    <p class="" ng-repeat="template in templates" ng-click="selectTemplate(template)" ng-class="{'bg-success': template.name == selectedTemplate.name}">{{template.name}}</p>
+    </div>
+  </div>
+  <div class="container">
+    <div class="row">
+    <pre>Model: {{clone.geoSelected | json}}</pre>
+      <form action="POST" name="clone-validator" class="form-inline" novalidate  autocomplete="off">
+        <div class="form-group">
+          <label class="sr-only" for="strategy-name">Strategy Name</label>
+          <input type="text" ng-model="clone.strategyName" name="strategy-name" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
+        </div>
+
+        <input type="text" ng-model="clone.geoSelected" placeholder="Locations loaded via $http" 
+        typeahead-min-length="3"
+        uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
+        typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
+        <i ng-show="loadingLocations" class="glyphicon glyphicon-refresh"></i>
+        <div ng-show="noResults">
+          <i class="glyphicon glyphicon-remove"></i> No Results Found
+        </div>
+
+      </form>
+      </div>
+      <div class="col-sm-4">
+        <h2>{{selectedTemplate.name}} Template Values</h2>
+        <table class="table col-sm-4">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>       
+          </thead>
+          <tbody>       
+            <tr ng-repeat="(key, value) in selectedTemplate.template">
+              <td>{{key}}</td>
+              <td>{{value}}</td>
+            </tr>       
+          </tbody>
+        </table>         
+      </div>
+    </div>
+  </div>
