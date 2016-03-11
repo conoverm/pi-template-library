@@ -17,198 +17,8 @@
      
       </div>
       <div class="col-sm-4">
-        <h2 ng-show="selectedTemplate">{{selectedTemplate.name}} Template Values</h2>       
+        <h2 ng-show="selectedTemplate">{{selectedTemplate.name}}</h2>       
       </div>
-
-
-
-
-
-    <!-- <form action="POST" name="clone-validator" class="form-inline col-sm-12" novalidate  autocomplete="off">
-      <div class="row">
-      
-      <div class="form-group">1.</div>
-        
-         <div class="form-group">
-          <label class="sr-only" for="strategy-name">Strategy Name</label>
-          <input type="text" ng-model="clone.strategyName1" name="strategy-name1" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <input type="text" ng-model="clone.geoSelected1" placeholder="Geo ID" name="geo1"
-        typeahead-min-length="3"
-        uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
-        typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
-        
-        <div class="form-group">
-          <label class="sr-only" for="concepts">Pixel Target ID</label>
-          <input type="text" ng-model="clone.pixel_target_id1" name="pixel_target_id1" class="form-control" id="clone.pixel_target_id" placeholder="Pixel Target ID" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="budget">Budget</label>
-          <input type="text" ng-model="clone.budget1" name="budget1" class="form-control" id="clone.budget" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="impression_cap">Impression Cap</label>
-          <input type="text" ng-model="clone.im" name="impression_cap1" class="form-control" id="clone.impress-cap" placeholder="Impression Cap" required="required" ng-maxlength="64">
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="form-group">2.</div>
-
-         <div class="form-group">
-          <label class="sr-only" for="strategy-name">Strategy Name</label>
-          <input type="text" ng-model="clone.strategyName2" name="strategy-name2" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <input type="text" ng-model="clone.geoSelected2" placeholder="Geo ID" name="geo2"
-        typeahead-min-length="3"
-        uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
-        typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
-        
-        <div class="form-group">
-          <label class="sr-only" for="concepts">Pixel Target ID</label>
-          <input type="text" ng-model="clone.pixel_target_id2" name="pixel_target_id2" class="form-control" id="clone.pixel_target_id" placeholder="Pixel Target ID" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="budget">Budget</label>
-          <input type="text" ng-model="clone.budget2" name="budget" class="form-control" id="clone.budget" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="impression_cap">Impression Cap</label>
-          <input type="text" ng-model="clone.impressionCap2" name="impression_cap2" class="form-control" id="clone.impress-cap" placeholder="Impression Cap" required="required" ng-maxlength="64">
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="form-group">3.</div>
-        <div class="form-group">
-          <label class="sr-only" for="strategy-name">Strategy Name</label>
-          <input type="text" ng-model="clone.strategyName3" name="strategy-name" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <input type="text" ng-model="clone.geoSelected3" placeholder="Geo ID" name="geo3"
-        typeahead-min-length="3"
-        uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
-        typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
-        
-        <div class="form-group">
-          <label class="sr-only" for="concepts">Pixel Target ID</label>
-          <input type="text" ng-model="clone.pixel_target_id3" name="pixel_target_id3" class="form-control" id="clone.pixel_target_id" placeholder="Pixel Target ID" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="budget">Budget</label>
-          <input type="text" ng-model="clone.budget3" name="budget" class="form-control" id="clone.budget" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="impression_cap">Impression Cap</label>
-          <input type="text" ng-model="clone.impressionCap3" name="impression_cap3" class="form-control" id="clone.impress-cap" placeholder="Impression Cap" required="required" ng-maxlength="64">
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="form-group">4.</div>
-         <div class="form-group">
-          <label class="sr-only" for="strategy-name">Strategy Name</label>
-          <input type="text" ng-model="clone.strategyName4" name="strategy-name" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <input type="text" ng-model="clone.geoSelected4" placeholder="Geo ID" name="geo4"
-        typeahead-min-length="3"
-        uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
-        typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
-        
-        <div class="form-group">
-          <label class="sr-only" for="concepts">Pixel Target ID</label>
-          <input type="text" ng-model="clone.pixel_target_id4" name="pixel_target_id4" class="form-control" id="clone.pixel_target_id" placeholder="Pixel Target ID" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="budget">Budget</label>
-          <input type="text" ng-model="clone.budget4" name="budget" class="form-control" id="clone.budget" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="impression_cap">Impression Cap</label>
-          <input type="text" ng-model="clone.impressionCap4" name="impression_cap4" class="form-control" id="clone.impress-cap" placeholder="Impression Cap" required="required" ng-maxlength="64">
-        </div>
-
-      </div>
-      <div class="row">
-        <div class="form-group">5.</div>
-        <div class="form-group">
-          <label class="sr-only" for="strategy-name">Strategy Name</label>
-          <input type="text" ng-model="clone.strategyName5" name="strategy-name5" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <input type="text" ng-model="clone.geoSelected5" placeholder="Geo ID" name="geo5"
-                typeahead-min-length="3"
-                uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
-                typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
-          </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="concepts">Pixel Target ID</label>
-          <input type="text" ng-model="clone.pixel_target_id5" name="pixel_target_id5" class="form-control" id="clone.pixel_target_id" placeholder="Pixel Target ID" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="budget">Budget</label>
-          <input type="text" ng-model="clone.budget5" name="budget5" class="form-control" id="clone.budget" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="impression_cap">Impression Cap</label>
-          <input type="text" ng-model="clone.impressionCap5" name="impression_cap5" class="form-control" id="clone.impress-cap" placeholder="Impression Cap" required="required" ng-maxlength="64">
-        </div>
-
-      </div>
-  <button type="submit" class="btn btn-default">Submit</button>
-
-    </form>       -->
-
- <!--    <form>
-
-      <input ng-repeat="newStrat in newStrategies track by newStrat.id">{{newStrat.id}}
-    </form> -->
-
-<!--     <form action="POST" name="clone-validator" class="form-inline col-sm-12" novalidate  autocomplete="off">
-      <div class="row" ng-repeat="newStrat in newStrategies">
-        
-         <div class="form-group">
-          <label class="sr-only" for="strategy-name">Strategy Name</label>
-          <input type="text" ng-model="newStrategy.name" name="strategy-name1" class="form-control" id="clone.strategy-name" placeholder="Strategy Name" required="required" ng-maxlength="64">
-        </div>
-
-        <input type="text" ng-model="newStrategy.geo" placeholder="Geo ID" name="geo1"
-        typeahead-min-length="3"
-        uib-typeahead="geo as geo.displayName for geo in getLocation($viewValue)"
-        typeahead-loading="loadingLocations" typeahead-no-results="noResults" class="form-control">
-        
-        <div class="form-group">
-          <label class="sr-only" for="concepts">Pixel Target ID</label>
-          <input type="text" ng-model="newStrategy.pixel_target_expr" name="pixel_target_id1" class="form-control" id="clone.pixel_target_id" placeholder="Pixel Target ID" required="required" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="budget">Budget</label>
-          <input type="text" ng-model="newStrat.budget" name="budget1" class="form-control" id="clone.budget" placeholder="Budget" required="required" ng-disabled="true" ng-maxlength="64">
-        </div>
-
-        <div class="form-group">
-          <label class="sr-only" for="impression_cap">Impression Cap</label>
-          <input type="text" ng-model="newStrategy.impresion_cap" name="impression_cap1" class="form-control" id="clone.impress-cap" placeholder="Impression Cap" required="required" ng-maxlength="64">
-        </div>
-      </form> -->
-  
 
 
         <table class="table">
@@ -236,6 +46,24 @@
           </form> 
         </table> 
         <button type="submit" class="btn btn-primary" ng-click="saveStrategies()" ng-show="selectedTemplate">Save Strategies</button>
+        <br>
+      <div class="col-lg-6">
+        <h2>{{selectedTemplate.name}} Template Values</h2>
+        <table class="table table-striped table-hover col-sm-4">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Value</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr ng-repeat="(key, value) in selectedTemplate.template">
+              <td>{{key}}</td>
+              <td>{{value}}</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>        
 
     <!-- </div>
   </div>
