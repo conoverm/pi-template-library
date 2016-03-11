@@ -65,10 +65,11 @@ var save_to_bulk_api = function(new_strategy, callback){
         contentType : 'application/json',
         url : '/strategies/create',
         data : form_data,
-        processData: false
+        processData: true
 }).done(function(resp){
     callback()
 })
 }
+
 
 
