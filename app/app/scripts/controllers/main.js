@@ -12,11 +12,12 @@ angular.module('pintTemplateLibrary')
 .controller('MainCtrl', function($scope, $http, $firebaseObject, $firebaseArray) {
 
   var ref = new Firebase("https://strategytemplates.firebaseio.com");
+  // var ref1 = new Firebase("https://strategytemplates.firebaseio.com/3");
   // $scope.selectedTemplate = {}
   // download the data into a local object
-
+  // $scope.data = $firebaseObject(ref1)
   $scope.templates = $firebaseArray(ref)
-  $scope.audiences = [73562, 98746]
+  
 
   $scope.templates.$loaded()
     .then(function(x) {
@@ -37,7 +38,7 @@ angular.module('pintTemplateLibrary')
       $scope.selectedTemplate = template
       template.selected = true
       $scope.newStrategies = []
-      for (var i = 6; i >= 0; i--) {
+      for (var i = 4; i >= 0; i--) {
       	$scope.newStrategies[i] = angular.copy($scope.selectedTemplate.template)
       	console.log(i)
       	$scope.newStrategies[i].id = i
@@ -52,10 +53,11 @@ angular.module('pintTemplateLibrary')
 
 
   // $scope.data.$loaded().then(function(data){
-  //   $scope.data.editable = 'concepts, region, budget'
+  // 	$scope.data.audience = 654322
+  //   $scope.data.editable = 'concepts, audience, budget'
   //   $scope.data.template = {
 
-  //     'bid_aggressiveness': "50.00",
+  //     'bid_aggressiveness': "53.00",
   //     'bid_price_is_media_only': true,
   //     'budget': 1000000,
   //     'campaign_id': 12345,
@@ -85,7 +87,7 @@ angular.module('pintTemplateLibrary')
   //     'use_optimization': true            
   //   }
 
-  //   $scope.data.name = 'Dell Enterprise REM'
+  //   $scope.data.name = 'Live Nation Artist REM'
 
   //   $scope.data.$save().then(function(ref) {
   //     ref.key() === $scope.data.$id; // true
@@ -119,6 +121,15 @@ angular.module('pintTemplateLibrary')
 
   $scope.data = $firebaseObject(ref);
   $scope.clone = {};
+
+  $scope.saveStrategies = function(){
+
+  	for (var i = $scope.newStrategies.length - 1; i >= 0; i--) {
+  		$scope.newStrategies[i].name = $scope.selectedTemplate.name + '_' + $scope.newStrategies[i].pixel_target_expr
+  		console.log($scope.newStrategies[i])
+  	};
+
+  }
 
   $scope.getLocation = function(val) {
     console.info('getlocation', val)
